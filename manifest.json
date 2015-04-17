@@ -1,0 +1,13 @@
+{  
+  "name": "Push Demo",  
+  "short_name": "Push Demo",  
+  "icons": [{  
+        "src": "images/icon-192x192.png",  
+        "sizes": "192x192",
+        "type": "image/png" 
+      }],  
+  "start_url": "/chrome-push/push.html",  
+  "display": "standalone",  
+  "gcm_sender_id": "1072913364337",  
+  "gcm_user_visible_only": true  
+}
