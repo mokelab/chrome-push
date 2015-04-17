@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html>
+  <head>
+<title></title>
+</head>
+<body>
+<input id="email" type="text"/><br/>
+<input id="password" type="password"/><br/>
+<button onclick="login()">Log In</button>
+
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/1.9.1/jquery.min.js"></script>
+<script src="./kiilib.js"></script>
+<script type="text/javascript">
+function login() {
+  var email = $('#email').val();
+  var pass = $('#password').val();
+  var context = new Kii.KiiContext(
+    '94470486',
+    '050ea0e3b8bb0543e093b125a0c1c2d9',
+    'https://api-jp.kii.com/api');
+  var api = new Kii.KiiAppAPI(context);
+  api.login(email, pass, {
+    success : function(user){
+      console.log(user)
+    },
+    error : function(status, body){
+      console.log('error status=' + status);
+    }
+  });
+}
+</script>
+<address>
+<a href="mailto:fkm@fkm-mba2.local">fkm</a>
+</address>
+</body>
+</html>
